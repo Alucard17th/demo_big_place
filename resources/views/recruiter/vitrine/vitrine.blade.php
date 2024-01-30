@@ -425,7 +425,7 @@ nav > ul.pagination > li > a{
                             @php
                             use Carbon\Carbon;
                             @endphp
-                            @if(isset($offers) && count($offers) > 0)
+                            d
                             @foreach($offers as $offer)
                             <div class="col-4 mb-3">
                                 <div class="card h-100">
@@ -466,11 +466,12 @@ nav > ul.pagination > li > a{
                                 </div>
                             </div>
                             @endforeach
-                            @endif
+                            
 
                             <div class="col-12 d-flex justify-content-center">
                             {{ $offers->links() }}
                             </div>
+                            @endif
                         </div>
 
                         <div class="row justify-content-left align-items-left px-3" style="display:none"
