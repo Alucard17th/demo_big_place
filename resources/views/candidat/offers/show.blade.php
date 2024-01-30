@@ -5,6 +5,7 @@
         white-space: pre-wrap;
         word-wrap: break-word;
         margin-bottom: 0;
+        margin-top: 3px;
         font-size: 16px;
         line-height: 24px;
         color: #000 !important;
@@ -105,7 +106,7 @@
                                             class="text-muted">{{ $offer->benefits }}</span></h5>
 
                                         <h5 class="h6 mb-3">Descriptif du poste :
-                                            <div class="offer-desc text-dark">
+                                            <div class="offer-desc text-dark mt-2">
                                                 {!! $offer->description !!}
                                             </div>
                                             <!-- @if ($offer->post_tasks != null)
