@@ -341,10 +341,8 @@ Route::group(['middleware' => ['role:candidat', 'checkCurriculum']], function ()
 Route::get('/create-roles', function () {
     $role = Role::create(['name' => 'recruiter', 'guard_name' => 'web']);
     $role = Role::create(['name' => 'candidat', 'guard_name' => 'web']);
-
     // $role = Role::create(['name' => 'limited', 'guard_name' => 'web']);
     // $role = Role::create(['name' => 'restricted', 'guard_name' => 'web']);
-
 });
 
 
