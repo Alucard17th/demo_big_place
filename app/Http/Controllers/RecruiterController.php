@@ -532,7 +532,7 @@ class RecruiterController extends Controller
     public function myVitrine(){
         $user = auth()->user();
         $entreprise = $user->entreprise->first();
-        $offers = $entreprise->user->offers()->paginate(9) ?? [];
+        $offers = $entreprise != null ? $entreprise->user->offers()->paginate(9) : null;
         return view('recruiter.vitrine.vitrine', compact('entreprise', 'offers'));
     }
     public function updateVitrine(Request $request){
