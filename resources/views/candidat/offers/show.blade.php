@@ -1,6 +1,14 @@
 @extends('layouts.dashboard')
 @push('styles')
 <style>
+    .offer-desc p {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000 !important;
+    }
 </style>
 @endpush
 
