@@ -305,7 +305,8 @@ nav > ul.pagination > li > a{
                                     <li>Fondateurs : 
                                         @if(count(json_decode($entreprise->fondateurs)) > 1)
                                             @foreach(json_decode($entreprise->fondateurs) as $fondateur)
-                                            {{$fondateur}}, 
+                                            {{$fondateur}}
+                                            @if(!$loop->last)<span class="text-muted">,</span>@endif
                                             @endforeach
                                         @endif
                                     </li>
