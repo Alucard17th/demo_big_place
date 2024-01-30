@@ -96,14 +96,15 @@
                                         <h5 class="h6 mb-3">Avantages : <span
                                             class="text-muted">{{ $offer->benefits }}</span></h5>
 
-                                        <h5 class="h6 mb-3">Tâches à effectuer :
-                                            @if ($offer->post_tasks != null)
+                                        <h5 class="h6 mb-3">Descriptif du poste :
+                                            {{$offer->description}}
+                                            <!-- @if ($offer->post_tasks != null)
                                                 @foreach (json_decode($offer->post_tasks) as $task)
                                                 <span class="text-muted">{{ $task }}</span>@if(!$loop->last)<span class="text-muted">,</span>@endif
                                                 @endforeach
                                             @else
                                             <span class="text-muted">-</span>
-                                            @endif
+                                            @endif -->
                                         </h5>   
                                         
                                     </div>

@@ -296,7 +296,7 @@ nav > ul.pagination > li > a{
                             id="company-container">
                             <div class="col-12 mt-2 mb-1">
                                 <h4 class="text-dark">{{ $entreprise->nom_entreprise }}</h4>
-                                <p class="text-dark">{{ $entreprise->domiciliation }}, {{ $entreprise->siege_social }}</p>
+                                <p class="text-dark">{{ $entreprise->domiciliation }} <br> {{ $entreprise->siege_social }}</p>
                                 <ul class="list-unstyled text-dark">
                                     <li>Date de création : {{ $entreprise->date_creation }}</li>
                                     <!-- <li>{{ $entreprise->domiciliation }}</li> -->
