@@ -414,8 +414,9 @@ nav > ul.pagination > li > a{
                             </div>
 
                             <div class="row p-5" id="offers-container-header">
-                                <h4 class="text-dark"><span style="color:#ff8c00;"
-                                        class="mr-1">{{$entreprise->user->offers->count()}}
+                                <h4 class="text-dark">
+                                    <span style="color:#ff8c00;" class="mr-1">
+                                        {{$entreprise ? $entreprise->user->offers->count() : 0}}
                                     </span>Offres disponibles</h4>
                             </div>
                         </div>
