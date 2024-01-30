@@ -474,6 +474,8 @@ nav > ul.pagination > li > a{
                             @endif
                         </div>
 
+
+                        @if(isset($entreprise))
                         <div class="row justify-content-left align-items-left px-3" style="display:none"
                             id="company-container">
                             <div class="col-12 mt-2 mb-1">
@@ -623,6 +625,8 @@ nav > ul.pagination > li > a{
                                 </div>
                             </div>
                         </div>
+                        @endif
+
                     </div>
                 </div>
             </div>
