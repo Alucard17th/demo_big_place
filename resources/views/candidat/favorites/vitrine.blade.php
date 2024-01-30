@@ -311,6 +311,7 @@ nav > ul.pagination > li > a{
                                 <button type="button" class="btn" id="sent-btn">Vidéos</button>
                             </div>
 
+                            @if(isset($entreprise->photos_locaux) && count(json_decode($entreprise->photos_locaux)) > 0)
                             <div class="images-container">
                                 <div class="row">
                                     @foreach(json_decode($entreprise->photos_locaux) as $key => $photo)
@@ -320,6 +321,8 @@ nav > ul.pagination > li > a{
                                     @endforeach
                                 </div>
                             </div>
+                            @endif
+                            @if(isset($entreprise->video) && count(json_decode($entreprise->video)) > 0)
                             <div class="video-container" style="display: none">
                                 <div class="row">
                                     @foreach(json_decode($entreprise->video) as $key => $video)
@@ -330,6 +333,7 @@ nav > ul.pagination > li > a{
                                     @endforeach
                                 </div>
                             </div>
+                            @endif
                         </div>
 
                         <div class="row justify-content-left align-items-left px-3" style="display:none"
