@@ -425,52 +425,52 @@ nav > ul.pagination > li > a{
                             @php
                             use Carbon\Carbon;
                             @endphp
-                            d
-                            @foreach($offers as $offer)
-                            <div class="col-4 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body p-2">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                @if(!isset($entreprise->logo) || $entreprise->logo == '')
-                                                <img src="https://placehold.co/150X150" alt=""
-                                                    style="border-radius: 15px">
-                                                @else
-                                                <img class="img-fluid vitrine-logo"
-                                                    src="{{isset($entreprise) ? 'storage'.$entreprise->logo : '' }}"
-                                                    alt="logo">
-                                                @endif
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="">
-                                                    <a href="{{route('recruiter.show.vitrine.offer', $offer->id)}}" class="text-bg-blue">
-                                                       <h5> {{ $offer->job_title }}</h5>
-                                                    </a>
+                            @if(isset($offers) && count($offers) > 0)
+                                @foreach($offers as $offer)
+                                <div class="col-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body p-2">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    @if(!isset($entreprise->logo) || $entreprise->logo == '')
+                                                    <img src="https://placehold.co/150X150" alt=""
+                                                        style="border-radius: 15px">
+                                                    @else
+                                                    <img class="img-fluid vitrine-logo"
+                                                        src="{{isset($entreprise) ? 'storage'.$entreprise->logo : '' }}"
+                                                        alt="logo">
+                                                    @endif
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="text-bg-blue font-min">
-                                                    <img width="15" height="15" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-                                                    {{$offer->location_city}}
+                                                <div class="col-8">
+                                                    <div class="">
+                                                        <a href="{{route('recruiter.show.vitrine.offer', $offer->id)}}" class="text-bg-blue">
+                                                        <h5> {{ $offer->job_title }}</h5>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="text-bg-blue font-min">
-                                                    <img width="15" height="15" src="https://img.icons8.com/dotty/80/time.png" alt="time"/>
-                                                    {{ \Carbon\Carbon::parse($offer->created_at)->formatLocalized('%d-%m-%Y') }}
-                                                </div>
-                                                <div class="badges">
-                                                    <span class="badge badge-bg-orange text-white">{{$offer->contract_type}}</span>
+                                                <div class="col-12">
+                                                    <div class="text-bg-blue font-min">
+                                                        <img width="15" height="15" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+                                                        {{$offer->location_city}}
+                                                    </div>
+                                                    <div class="text-bg-blue font-min">
+                                                        <img width="15" height="15" src="https://img.icons8.com/dotty/80/time.png" alt="time"/>
+                                                        {{ \Carbon\Carbon::parse($offer->created_at)->formatLocalized('%d-%m-%Y') }}
+                                                    </div>
+                                                    <div class="badges">
+                                                        <span class="badge badge-bg-orange text-white">{{$offer->contract_type}}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
-                            
+                                @endforeach
+                                
 
-                            <div class="col-12 d-flex justify-content-center">
-                            {{ $offers->links() }}
-                            </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                {{ $offers->links() }}
+                                </div>
                             @endif
                         </div>
 
