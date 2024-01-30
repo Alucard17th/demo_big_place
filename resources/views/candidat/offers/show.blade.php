@@ -58,7 +58,7 @@
                                                 class="text-muted">{{ $offer->contract_type }}</span></h5>
 
                                         <h5 class="h6 mb-3">Horaires de travail :
-                                            @if ($offer->work_schedule != "null")
+                                            @if ($offer->work_schedule != null && $offer->work_schedule != '[]')
                                                 @foreach (json_decode($offer->work_schedule) as $schedule)
                                                     <span class="text-muted">{{ $schedule }}</span>@if(!$loop->last)<span class="text-muted">,</span>@endif
                                                 @endforeach
