@@ -4,10 +4,9 @@
     .offer-desc p {
         white-space: pre-wrap;
         word-wrap: break-word;
-        margin-bottom: 0;
-        margin-top: 3px;
+        margin-bottom: 0 !important;
+        margin-top: 3px !important;
         font-size: 16px;
-        line-height: 24px;
         color: #000 !important;
     }
 </style>
